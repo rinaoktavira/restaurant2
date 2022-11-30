@@ -5,8 +5,7 @@ import 'package:resto_app/provider/provider_list.dart';
 import 'package:resto_app/data/model/restaurant_list.dart';
 import 'package:resto_app/widget/list_restaurant.dart';
 import 'package:resto_app/data/api/api_service.dart';
-
-enum RestaurantState { loading, noData, hasData, error }
+import 'package:resto_app/common/constant.dart';
 
 class RestaurantListPage extends StatelessWidget {
   static const routeName = '/restaurant_list';

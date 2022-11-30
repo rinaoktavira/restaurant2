@@ -21,16 +21,10 @@ class _HomePageState extends State<HomePage> {
     const RestaurantListPage(),
     const RestaurantSearchPage(),
     const Center(
-      child: Text(
-        'Profil',
-        style: optionStyle,
-      ),
+      child: Text('Favorit'),
     ),
     const Center(
-      child: Text(
-        'Profil',
-        style: optionStyle,
-      ),
+      child: Text('Profil'),
     ),
   ];
 
@@ -44,7 +38,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.lime,
+        backgroundColor: Colors.lime.shade400,
         elevation: 0,
         title: const Text(
           "Restaurant App",
@@ -67,14 +61,13 @@ class _HomePageState extends State<HomePage> {
       unselectedItemColor: Colors.grey.withOpacity(0.5),
       showUnselectedLabels: false,
       showSelectedLabels: false,
-      backgroundColor: Colors.white,
-      elevation: 0, //ketebalan shadow
+      backgroundColor: Colors.lime.shade200,
       items: const [
         BottomNavigationBarItem(label: 'Home', icon: Icon(Icons.home)),
         BottomNavigationBarItem(label: 'Search', icon: Icon(Icons.search)),
         BottomNavigationBarItem(label: 'Favorite', icon: Icon(Icons.favorite)),
         BottomNavigationBarItem(
-            label: 'Profil', icon: Icon(Icons.account_circle))
+            label: 'Profil', icon: Icon(Icons.account_balance_outlined))
       ],
       onTap: (index) {
         _onItemTapped(index);

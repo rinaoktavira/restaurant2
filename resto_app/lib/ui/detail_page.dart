@@ -4,8 +4,7 @@ import 'package:provider/provider.dart';
 import 'package:resto_app/provider/provider_detail.dart';
 import 'package:resto_app/data/api/api_service.dart';
 import 'package:resto_app/data/model/restaurants_detail.dart';
-
-enum ResultState { loading, noData, hasData, error }
+import 'package:resto_app/common/constant.dart';
 
 class RestaurantDetailPage extends StatelessWidget {
   static const routeName = '/restaurant_detail';
@@ -17,14 +16,14 @@ class RestaurantDetailPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.lime,
+        backgroundColor: Colors.lime.shade300,
         elevation: 0,
         foregroundColor: Colors.black,
         title: const Text(
           "Restaurant App",
         ),
       ),
-      backgroundColor: Colors.lime.shade100,
+      backgroundColor: Colors.lime.shade200,
       body: ChangeNotifierProvider<DetailRestaurantProvider>(
         create: (_) => DetailRestaurantProvider(
             apiService: ApiService(), id: idrestaurant),

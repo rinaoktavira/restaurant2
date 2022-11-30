@@ -38,7 +38,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   initScreen(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 151, 204, 51),
+      backgroundColor: Color.fromARGB(255, 190, 245, 90),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

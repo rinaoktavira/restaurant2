@@ -18,45 +18,37 @@ class CardRestaurant extends StatelessWidget {
       child: Stack(
         children: <Widget>[
           Container(
-            //mohon maaf tidak mengunakan sizebox seperti yang di sarankan di submission sebelumnya karena sizebox tidak bisa pake margin
             margin:
                 const EdgeInsets.only(left: 40, top: 5, right: 20, bottom: 5),
             height: 170.0,
             width: double.infinity,
             decoration: BoxDecoration(
-              color: Colors.white,
+              color: Colors.lime.shade100,
               borderRadius: BorderRadius.circular(20.0),
             ),
             child: Padding(
               padding: const EdgeInsets.only(
                   left: 200, top: 20, right: 20, bottom: 20),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-                  SizedBox(
-                    width: 120.0,
-                    child: Text(restaurant.name),
-                  ),
-                  _sizebox(10),
-                  Row(
-                    children: [
-                      _icon(Icons.location_on, 10, Colors.black),
-                      Text(
-                        ' ${restaurant.city}',
-                      ),
-                    ],
-                  ),
-                  _sizebox(10),
-                  Row(
-                    children: [
-                      _icon(Icons.star_rate, 20, Colors.yellow),
-                      Text(
-                        ' ${restaurant.rating}',
-                      ),
-                    ],
-                  )
-                ],
+              child: Expanded(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    SizedBox(
+                      width: 120.0,
+                      child: Expanded(child: Text(restaurant.name)),
+                    ),
+                    _sizebox(10),
+                    Row(
+                      children: [
+                        _icon(Icons.star_rate, 20, Colors.yellow),
+                        Text(
+                          ' ${restaurant.rating}',
+                        ),
+                      ],
+                    )
+                  ],
+                ),
               ),
             ),
           ),

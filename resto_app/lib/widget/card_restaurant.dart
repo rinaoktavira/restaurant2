@@ -41,13 +41,6 @@ class Card_resto extends StatelessWidget {
                   _sizebox(10),
                   Row(
                     children: [
-                      _icon(Icons.location_on, 16, Colors.black),
-                      Text(' ${restaurant.city}'),
-                    ],
-                  ),
-                  _sizebox(10),
-                  Row(
-                    children: [
                       _icon(Icons.star_rate, 20, Colors.yellow),
                       Text(
                         ' ${restaurant.rating}',

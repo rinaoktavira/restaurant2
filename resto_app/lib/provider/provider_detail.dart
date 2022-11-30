@@ -4,8 +4,7 @@ import 'dart:io';
 import 'package:resto_app/data/api/api_service.dart';
 import 'package:resto_app/data/model/restaurants_detail.dart';
 import 'package:flutter/material.dart';
-
-enum ResultState { loading, noData, hasData, error }
+import 'package:resto_app/common/constant.dart';
 
 class DetailRestaurantProvider extends ChangeNotifier {
   final ApiService apiService;
@@ -40,8 +39,7 @@ class DetailRestaurantProvider extends ChangeNotifier {
     } on SocketException {
       _state = ResultState.error;
       notifyListeners();
-      return _message =
-          "Terjadi kesalahan saat menghubungkan, silahkan cek koneksi anda!!";
+      return _message = "Lost Connection";
     } catch (e) {
       _state = ResultState.error;
       notifyListeners();

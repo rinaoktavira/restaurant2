@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import 'package:resto_app/data/api/api_service.dart';
 import 'package:resto_app/provider/provider_search.dart';
 import 'package:resto_app/widget/card_restaurant.dart';
+import 'package:resto_app/common/constant.dart';
 
 class RestaurantSearchPage extends StatefulWidget {
   const RestaurantSearchPage({Key? key}) : super(key: key);
@@ -64,9 +65,7 @@ class _RestaurantSearchPageState extends State<RestaurantSearchPage> {
                   ),
                 ),
                 (hasil.isEmpty)
-                    ? const Center(
-                        child: Text('Tuliskan apa yang ingin dicari!'),
-                      )
+                    ? const Center()
                     : Consumer<SearchRestaurantProvider>(
                         builder: (context, state, _) {
                           if (state.state == ResultState.loading) {
