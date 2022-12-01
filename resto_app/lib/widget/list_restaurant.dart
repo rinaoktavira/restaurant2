@@ -29,26 +29,24 @@ class CardRestaurant extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.only(
                   left: 200, top: 20, right: 20, bottom: 20),
-              child: Expanded(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                    SizedBox(
-                      width: 120.0,
-                      child: Expanded(child: Text(restaurant.name)),
-                    ),
-                    _sizebox(10),
-                    Row(
-                      children: [
-                        _icon(Icons.star_rate, 20, Colors.yellow),
-                        Text(
-                          ' ${restaurant.rating}',
-                        ),
-                      ],
-                    )
-                  ],
-                ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  SizedBox(
+                    width: 120.0,
+                    child: Text(restaurant.name),
+                  ),
+                  _sizebox(10),
+                  Row(
+                    children: [
+                      _icon(Icons.star_rate, 20, Colors.yellow),
+                      Text(
+                        ' ${restaurant.rating}',
+                      ),
+                    ],
+                  )
+                ],
               ),
             ),
           ),
