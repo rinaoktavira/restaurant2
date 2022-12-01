@@ -137,8 +137,7 @@ class RestaurantDetail extends StatelessWidget {
                       ListBody(
                         children: restaurant.customerReviews.map((review) {
                           return Padding(
-                            padding: const EdgeInsets.all(16.0),
-                            child: Expanded(
+                              padding: const EdgeInsets.all(16.0),
                               child: Row(children: [
                                 Container(
                                   width: 40,
@@ -173,7 +172,7 @@ class RestaurantDetail extends StatelessWidget {
                                             style: TextStyle(
                                                 fontSize: 14,
                                                 color: Colors.grey.shade500),
-                                          )
+                                          ),
                                         ],
                                       ),
                                       SizedBox(
@@ -186,10 +185,8 @@ class RestaurantDetail extends StatelessWidget {
                                       )
                                     ],
                                   ),
-                                )
-                              ]),
-                            ),
-                          );
+                                ),
+                              ]));
                         }).toList(),
                       ),
                     ],
